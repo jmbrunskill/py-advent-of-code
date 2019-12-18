@@ -1,6 +1,7 @@
 import unittest
 
-from day1 import calcFuelPerUnitMass
+from functions import calcTotalFuel
+
 
 
 class TestFuelCalc(unittest.TestCase):
@@ -20,17 +21,17 @@ class TestFuelCalc(unittest.TestCase):
             {
                 "name": "Fuel for Mass 1969",
                 "input": 1969,
-                "expected": 654
+                "expected": 966
             },
             {
                 "name": "Fuel for Mass 100756",
                 "input": 100756,
-                "expected": 33583
+                "expected": 50346
             },
         ]
         for test_case in test_cases:
             self.assertEqual(
-                calcFuel(test_case["input"]), test_case["expected"], test_case["name"])
+                calcTotalFuel(test_case["input"]), test_case["expected"], test_case["name"])
 
 
 if __name__ == '__main__':
